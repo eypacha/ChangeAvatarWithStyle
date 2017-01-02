@@ -1,3 +1,9 @@
+<html>
+<head>
+  <title>ChangeAvatarWithStyle</title>
+  <link href="css/caws.css" rel="stylesheet">
+</head>
+<body>
 <!-- Avatar y boton cambiar dentro de un contenedor -->
 <div class="avatarContainer">
   <img id="avatar" src="path/to/avatar">
@@ -9,46 +15,11 @@
     <input id="form_file" type="file" name="image" onchange='submit_form()' accept="image/*">
     <input type="submit" id="form_submit">
 </form>
-
-<!-- Los estilos necesarios -->
-<style>
-.avatarContainer {
-    width: 100px;
-    height: 100px;
-    }
-.avatarContainer img {
-    width: 100%;
-    height: 100%;
-    }
-.changeAvatar {
-    font-size: 9pt;
-    color: black;
-    cursor: pointer;
-    position: relative;
-    top: calc(-50% - 10px);
-    left: calc(50% - 40px);
-    width: 80px;
-    padding-top: 5px;
-    height: 20px;
-    background: rgba(0,0,0,0.5);
-    border-radius: 5px;
-    text-align: center;
-    vertical-align: center;
-    opacity: 0;
-    transition: all 300ms;
-}
-.changeAvatar:hover {
-    opacity: 1;
-}
-.hidden {
-    display: none !important;
-}
-</style>
-
-<!-- Y por último los scripts correspondientes (jQuery necesario) -->
+  
+<!-- Any jQuery needed -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script>
 function changeAvatar(){
-    
     $("#form_file").click();
     return false;
 }
@@ -57,3 +28,5 @@ function submit_form(){
     return false;
 }
 </script>
+</body>
+</html>
